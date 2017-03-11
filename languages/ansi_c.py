@@ -45,22 +45,22 @@ class EncoderAnsiC(LanguageEncoder):
             f.write(self.code_encoder)
             f.write(self.code_decoder)
 
-            f.write("void print_as_hex(char* dicks, int x) {\n")
+            f.write("void print_as_hex(char* enc_me, int x) {\n")
             f.write("  int i;\n")
             f.write("  for (i = 0; i < x; i++) {\n")
             f.write("      if (i > 0) printf(\":\");\n")
-            f.write("      printf(\"%2X\", dicks[i]);\n")
+            f.write("      printf(\"%2X\", enc_me[i]);\n")
             f.write("  }\n")
             f.write("  printf(\"\\n\");\n}\n\n")
 
             f.write("void ansi_c_tests() {\n")
-            f.write("  char* pt1 = \"shitballs\";\n")
+            f.write("  char* pt1 = \"crap\";\n")
             f.write("  int l1 = strlen(pt1);\n")
 
             f.write("  char* pt2 = \"1234567890!@##$%^&*()\";\n")
             f.write("  int l2 = strlen(pt2);\n")
 
-            f.write("  char* pt3 = \"OMGLOB wtf holy shit cocks\";\n")
+            f.write("  char* pt3 = \"OMGLOB Lumpy Space Princes is #1 all the way across the sky!\";\n")
             f.write("  int l3 = strlen(pt3);\n")
 
             #f.write("  char ct1[9];\n")

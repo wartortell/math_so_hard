@@ -35,7 +35,7 @@ class EncoderPython(LanguageEncoder):
             f.write(self.code_encoder)
             f.write(self.code_decoder)
 
-            f.write("def test_shit(pt1):\n")
+            f.write("def test_a_thing(pt1):\n")
             f.write("    ct1 = %s(pt1, len(pt1))\n" % self.code_encoder_name)
             f.write("    dt1 = %s(ct1, len(pt1))\n" % self.code_decoder_name)
             f.write("    if not (pt1 == dt1):\n")
@@ -44,8 +44,8 @@ class EncoderPython(LanguageEncoder):
             f.write("        print \"Test passed: %s\" % pt1\n\n\n")
 
             f.write("def main():\n")
-            f.write("    test_shit(\"ballsnstuff\")\n")
-            f.write("    test_shit(\"asdn1234567890~!@#$%^&*()\")\n\n")
+            f.write("    test_a_thing(\"crappy test #1 coming up\")\n")
+            f.write("    test_a_thing(\"asdn1234567890~!@#$%^&*()\")\n\n")
 
             f.write("main()\n")
 
